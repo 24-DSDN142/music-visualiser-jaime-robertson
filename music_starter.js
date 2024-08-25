@@ -1,27 +1,48 @@
+let y= 110
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  background(20)
+  background(0)
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
   textSize(24);
+  console.log(counter);
+ 
+   if(counter > 0){
+    fill(138, 53, 50)
+    rect(630,100,50,50)
+  }
+  else{ 
+  fill(0);  
 
-  let eyeSize = map(vocal,0,100,30,50);
-  fill(57,201,79);
-  ellipse(180,300,100,100);
-  ellipse(350,300,100,100);
+  }
+ 
 
-  ellipse(260,400,300,200);
+  // for(let i = 0; i <=4; i ++){
+  //   fill(150,219,190);
+  //   ellipse(400, y * i +100 , 100);
 
-  fill(0);
-  ellipse(180,290,eyeSize,eyeSize);
-  ellipse(350,290,eyeSize,eyeSize);
+  fill(138, 53, 50)
+  rect(630,100,50,50)
 
-  let mouthSize = map(bass,0,100,20,150);
-  fill(0);
-  ellipse(260,430,200,mouthSize);
-  
-}
+  }
+
+
+
+  // let eyeSize = map(vocal,0,100,30,50);
+  // fill(57,201,79);
+  // ellipse(180,300,100,100);
+  // ellipse(350,300,100,100);
+
+  // ellipse(260,400,300,200);
+
+  // fill(0);
+  // ellipse(180,290,eyeSize,eyeSize);
+  // ellipse(350,290,eyeSize,eyeSize);
+
+  // let mouthSize = map(bass,0,100,20,150);
+  // fill(0);
+  // ellipse(260,430,200,mouthSize);
   
 
 
