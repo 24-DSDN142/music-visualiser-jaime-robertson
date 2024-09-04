@@ -8,21 +8,43 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   textSize(24);
   console.log(counter);
 
-  stroke(0);
-  fill(200);
-  rect(320,400,250,500);
-
-  fill(138,53,50);
+  noStroke();
   
-  rect(203,400,15,500);
-  rect(437,400,15,500);
-  rect(320,158,250,23);
+  fill(230, 52, 32, 200);
+  rect(320,400,200,500);
+  
+  fill(230,52,32,190);
+  rect(320,400,150,500)
 
-  stroke(237, 113, 104);
+  
+
+
+
+  stroke(0);
+  fill(230, 52, 32, 220); // red
+  rect(320,400,250,500); // glass
+  
+
+  stroke(0);
+  fill(65); //grey
+
+  //rect(380,333,10,320);
+  //rect(260,333,10,320);
+  
+  rect(203,400,15,500); //left window frame
+  rect(437,400,15,500); //right window frame
+  rect(320,158,250,30); //top window frame 
+
+  rect(320,320,220,8) // middle window frame
+
+  rect(317,480,300,30)
+
+
+  stroke(20); // black
   line(195,150,445,150);
 
-  //line(196,150,210,167)
- 
+  //line(210,230,230,230)
+  line(215,)
  
   //  if(counter > 0){
   //   fill(138, 53, 50);
