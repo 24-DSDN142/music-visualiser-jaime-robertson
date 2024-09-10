@@ -37,11 +37,19 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   stroke(20); // black
   line(195,150,445,150);
 
-    if(counter > 300){
-    line(210,230,245,232);
-    line(215,230,220,220);
   
-    line(400,290,428,287);
+
+  line(210,230,255,237); //for > 300 counter
+  line(215,230,220,220);
+  line(400,290,428,287);
+  line(210,300,230,290);
+
+  line(210,400,291,405);
+  line(230,400,220,380);
+  line(270,400,310,425); 
+
+    if(counter > 300){
+    
     }
     else{ 
     
@@ -87,7 +95,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
       ellipse(320,250,eyeSize,eyeSize);
 
       fill(230,52,32,255);
-      noStroke()
+      noStroke();
       rotate(-40);
       rect(40,333,50,20);
   
@@ -95,9 +103,9 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
       stroke(0);
       fill(0);
-      line(250,230,290,200)
+      line(250,230,290,200);
 
-      let backStripe = map(bass,0,100,10,200)
+      let backStripe = map(bass,0,100,10,200);
       noStroke();
       fill(59, 56, 56,200);
       rect(0,0,backStripe,1000);
