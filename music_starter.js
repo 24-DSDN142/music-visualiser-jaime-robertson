@@ -28,7 +28,9 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   
   rect(203,400,15,500); //left window frame
   rect(437,400,15,500); //right window frame
-  rect(320,158,250,30); //top window frame 
+  rect(320,158,250,30); //top window frame
+  rect(200,455,10,20);
+  rect(440,455,10,20); 
 
   rect(320,320,220,8); // middle window frame
 
@@ -37,23 +39,35 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   stroke(20); // black
   line(195,150,445,150);
 
-  
-
-  line(210,230,255,237); //for > 300 counter
+  line(210,230,255,237); //for > 400 counter
   line(215,230,220,220);
   line(400,290,428,287);
-  line(210,300,230,290);
+  line(210,300,230,298);
 
-  line(210,400,291,405);
+  line(210,400,291,405); //for >670 counter
   line(230,400,220,380);
-  line(270,400,310,425); 
+  line(270,404,300,415); 
+  line(210,397,310,403);
+  line(210,405,250,410)
+ 
 
-    if(counter > 300){
+
+    if(counter > 400){
     
+
     }
     else{ 
     
     }
+
+      if(counter > 670){
+      
+      
+
+      }
+      else{
+
+      }
 
   }
 
