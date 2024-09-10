@@ -57,7 +57,6 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   line(360,265,428,265);
  
 
-
     if(counter > 400){
     
 
@@ -126,11 +125,14 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
       line(225,250,250,230);
       line(370,220,390,225)
 
+
       let backStripe = map(bass,0,100,10,200);
       noStroke();
       fill(59, 56, 56,200);
       rect(0,0,backStripe,1000);
       rect(640,0,backStripe,1000);
+
+      
 
       
 
