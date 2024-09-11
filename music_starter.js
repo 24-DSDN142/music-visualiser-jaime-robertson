@@ -43,6 +43,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   stroke(20); // black
   line(195,150,445,150); // top frame detail
 
+  // if statements to make the cracks in the glass appear in time with the song
 
     if(counter > 400){ // First broken glass details
       line(210,230,255,237); //for > 400 counter
@@ -159,76 +160,71 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         
         // left creature
         noStroke();
-        fill(230, 52, 32, 255);
-        triangle(90,365,90,325,100,350);
-        triangle(115,355,115,315,125,345);
-        ellipse(120,370,80,50);
-        rect(110,445,50,110,80);
+        fill(230, 52, 32, 255); // red 
+        triangle(90,365,90,325,100,350); // left ear 
+        triangle(115,355,115,315,125,345); // right ear
+        ellipse(120,370,80,50); // head
+        rect(110,445,50,110,80); // body
 
-        fill(247, 104, 94);
-        ellipse(125,460,30,80);
+        fill(247, 104, 94); // light red
+        ellipse(125,460,30,80); // tummy patch
 
-        fill(40);
-        rect(140,450,10,100);
+        fill(40); // background grey
+        rect(140,450,10,100); // rect to cover up some of the tummy patch
         
        
         
-        let tailLength = map(vocal,0,100,200,700);
-        fill(230,52,32,255);
-        rect(70,600,5,tailLength);
-        triangle(60,380,70,360,80,380);
+        let tailLength = map(vocal,0,100,200,700); // map for the length of the creatures tail
+        fill(230,52,32,255); // red
+        rect(70,600,5,tailLength); // tail
+        triangle(60,380,70,360,80,380); //spike on end of tail
 
-        stroke(0);
-        fill(255);
-        ellipse(110,370,30,15);
-       
         
         let otherEye = map(other,0,100,120,100);
-        
-        fill(40);
-        ellipse(otherEye,370,10,10);
+        stroke(0); // black
+        fill(255); // white
+        ellipse(110,370,30,15); // white part of the eye
+
+        fill(40); // black
+        ellipse(otherEye,370,10,10); // pupil of the eye
 
       ////////////////////////////////////////////////
         
         // right creature
         noStroke();
-        fill(230, 52, 32, 255);
-        triangle(90+420,365,90+420,325,100+420,350);
-        triangle(115+415,355,115+415,315,125+415,355);
-        ellipse(120+400,370,80,50);
-        rect(110+420,445,50,110,80);
+        fill(230, 52, 32, 255); // red
+        triangle(90+445,365,90+445,325,100+445,350); // right ear
+        triangle(115+395,355,115+395,315,125+395,345); // left ear
+        ellipse(120+400,370,80,50); // head
+        rect(110+420,445,50,110,80); // body
+       
+        
+        fill(247, 104, 94); // light red
+        ellipse(125+390,460,30,80); // tummy patch
 
-        fill(247, 104, 94);
-        ellipse(125+390,460,30,80);
+        fill(40); // background grey
+        rect(140+360,450,10,100); // rect to cover up some of the tummy patch
+        
 
-        fill(40);
-        rect(140+360,450,10,100);
-        
-        
-        
         let tailLength2 = map(vocal,0,100,200,700);
-        fill(230,52,32,255);
-        rect(70+500,600,5,tailLength2);
-        triangle(60+500,380,70+500,360,80+500,380);
+        fill(230,52,32,255); //red
+        rect(70+500,600,5,tailLength2); //tail
+        triangle(60+500,380,70+500,360,80+500,380); // spike on end of tail
 
 
         let otherEye2 = map(other,0,100,120,100);
-        stroke(0);
-        fill(255);
-        ellipse(110+420,370,30,15);
+        stroke(0); // black
+        fill(255); // white
+        ellipse(110+420,370,30,15); // white part of the eye
 
-        fill(40);
-        ellipse(otherEye2+420,370,10,10);
+        fill(40); // black
+        ellipse(otherEye2+420,370,10,10); // pupil of the eye
 
        
-       
-
     }
       else{
 
-
-
-    }
+      }
 
 
   }
