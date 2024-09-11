@@ -9,36 +9,42 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   angleMode(DEGREES);
 
   noStroke();
+
+  //////////////////////////////////////////////////////////////////////////////////////////
   
-  if(counter < 1130){
-  fill(247, 235, 210, 200);
-  rect(320,400,200,500);
+  if(counter < 1130){     // This section of the code is for the first window which is shown
+                          // ...at the beginning of the song.
+
+                          // The counter is responsible for making sure this code only runs in the
+                          //...first part of the song where the "broken glass" sound effects happen.
+
+  fill(247, 235, 210, 200); // off white colour for the pane of glass
+  rect(320,400,200,500); // glass
   
-  fill(247, 235, 210, 190);
-  rect(320,400,150,500)
+  fill(247, 235, 210, 190); // off white colour for pane of glass
+  rect(320,400,150,500) // glass
 
   stroke(0);
-  fill(247, 235, 210, 220); // red
+  fill(247, 235, 210, 220); // off white colour for pane of glass
   rect(320,400,250,500); // glass
   
-  stroke(0);
-  fill(59, 56, 56, 255); //grey
+  stroke(0); // black outline
+  fill(59, 56, 56, 255); //grey for the window framing
   
   rect(203,400,15,500); //left window frame
   rect(437,400,15,500); //right window frame
   rect(320,158,250,30); //top window frame
-  rect(200,455,10,20);
-  rect(440,455,10,20); 
-
   rect(320,320,220,8); // middle window frame
+  rect(317,480,300,30); //bottom window frame
 
-  rect(317,480,300,30);
+  rect(200,455,10,20); // bottom left detail
+  rect(440,455,10,20); // bottom right detail
 
   stroke(20); // black
-  line(195,150,445,150);
+  line(195,150,445,150); // top frame detail
 
 
-    if(counter > 400){
+    if(counter > 400){ // First broken glass details
       line(210,230,255,237); //for > 400 counter
       line(215,230,220,220);
       line(400,290,428,287);
@@ -49,7 +55,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
     
     }
 
-      if(counter > 670){
+      if(counter > 670){ // Second broken glass details
         line(210,400,291,405); //for >670 counter
         line(230,400,220,380);
         line(270,404,300,415); 
@@ -62,8 +68,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
       }
 
-        if(counter > 810){
-
+        if(counter > 810){ // Third broken glass details
           line(350,220,420,300); //for >810 counter
           line(403,280,428,290);
           line(385,260,430,280);
@@ -75,8 +80,8 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
         }
 
-          if(counter > 1040){
-            line(210,415,230,400); //for >1050 counter
+          if(counter > 1040){ // final broken glass details
+            line(210,415,230,400); //for >1040 counter
             line(403,400,428,415);
             line(390,240,395,270);
             line(380,232,390,265);
@@ -87,69 +92,72 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
           }
 
     }
+      //////////////////////////////////////////////////////////////////////////////////
+      else{ // second section for when the second window is shown with all the creatures.
 
-      else{
-
+       // this counter starts a little later than when the previous one ends on purpose
+       // ... so the screen goes black for a bit for dramatic effect when the intro finishes.
        if(counter > 1140){ 
         
-        
+        fill(230,52,32,200); // red colour for pane of glass
+        rect(320,400,200,500); //glass
 
-        fill(230, 52, 32, 200);
-        rect(320,400,200,500);
-
-        fill(230,52,32,190);
-        rect(320,400,150,500);
+        fill(230,52,32,190); // red colour for pane of glass
+        rect(320,400,150,500); //glass
     
         stroke(0);
-        fill(230, 52, 32, 220); // red
+        fill(230, 52, 32, 220); // red colour for pane of glass
         rect(320,400,250,500); // glass
 
        
-        stroke(0);
-        fill(59, 56, 56, 255); //grey
+        stroke(0); // black outline
+        fill(59, 56, 56, 255); //grey for the window framing
   
         rect(203,400,15,500); //left window frame
         rect(437,400,15,500); //right window frame
         rect(320,158,250,30); //top window frame 
-
         rect(320,320,220,8); // middle window frame
+        rect(317,480,300,30); // bottom window frame
 
-        rect(317,480,300,30);
+        rect(200,455,10,20); // bottom left detail
+        rect(440,455,10,20); // bottom right detail
 
         stroke(20); // black
-        line(195,150,445,150);
+        line(195,150,445,150); // top frame detail
+
+        ///////////////////////////////////////////////////
       
-        let eyeSize = map(drum,0,100,10,70);
+        let eyeSize = map(drum,0,100,10,70); // map for the big eye in the middle
   
-        fill(255, 250, 250, 230);
-        ellipse(320,250,180,60);
+        fill(255, 250, 250, 230); // slightly transparent white
+        ellipse(320,250,180,60); // white part of eye
   
-  
-        fill(0);
-        ellipse(320,250,eyeSize,eyeSize);
+        fill(0); // black
+        ellipse(320,250,eyeSize,eyeSize); // pupil of the eye
 
-        fill(230,52,32,255);
+        fill(230,52,32,255); //red
         noStroke();
-        rotate(-40);
-        rect(40,333,50,20);
+        rotate(-40); // rotate to get on angle
+        rect(40,333,50,20); // rectangle to break up the shape of the ellipse a bit
   
-        rotate(40);
+        rotate(40); // rotating eveything else back to normal
 
-        stroke(0);
-        fill(0);
-        line(225,250,250,230);
-        line(370,220,390,225);
+        stroke(0); // black
+        fill(0); // black
+        line(225,250,250,230); // eye detail
+        line(370,220,390,225); // eye detail
 
 
-        let backStripe = map(bass,0,100,10,200);
+        let backStripe = map(bass,0,100,10,200); // map for the stripes on both sides
         noStroke();
-        fill(59, 56, 56,200);
+        fill(59, 56, 56,200); // grey
         rect(0,0,backStripe,1000);
         rect(640,0,backStripe,1000);
-
+        ////////////////////////////////////////////
       
-        // singing character 
+        // code for the mini red creatures
         
+        // left creature
         noStroke();
         fill(230, 52, 32, 255);
         triangle(90,365,90,325,100,350);
@@ -163,6 +171,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         fill(40);
         rect(140,450,10,100);
         
+       
         
         let tailLength = map(vocal,0,100,200,700);
         fill(230,52,32,255);
@@ -179,8 +188,9 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         fill(40);
         ellipse(otherEye,370,10,10);
 
-//////////////////////////////
+      ////////////////////////////////////////////////
         
+        // right creature
         noStroke();
         fill(230, 52, 32, 255);
         triangle(90+420,365,90+420,325,100+420,350);
@@ -194,16 +204,14 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         fill(40);
         rect(140+360,450,10,100);
         
-        ////////////////////////////////////////////
+        
         
         let tailLength2 = map(vocal,0,100,200,700);
         fill(230,52,32,255);
         rect(70+500,600,5,tailLength2);
         triangle(60+500,380,70+500,360,80+500,380);
 
-       
-       
-        
+
         let otherEye2 = map(other,0,100,120,100);
         stroke(0);
         fill(255);
