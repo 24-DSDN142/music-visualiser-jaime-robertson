@@ -37,14 +37,6 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   stroke(20); // black
   line(195,150,445,150);
 
- 
-
-
-
-
-
-  
- 
 
     if(counter > 400){
       line(210,230,255,237); //for > 400 counter
@@ -59,10 +51,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
       if(counter > 670){
         line(210,400,291,405); //for >670 counter
-  line(230,400,220,380);
-  line(270,404,300,415); 
-  line(210,397,310,403);
-  line(210,405,250,410);
+        line(230,400,220,380);
+        line(270,404,300,415); 
+        line(210,397,310,403);
+        line(210,405,250,410);
       
 
       }
@@ -98,7 +90,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
       else{
 
-        if(counter > 1140){ 
+       if(counter > 1140){ 
         
         
 
@@ -158,7 +150,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
       
         // singing character 
         
-
+        noStroke();
         fill(230, 52, 32, 255);
         triangle(90,365,90,325,100,350);
         triangle(115,355,115,315,125,345);
@@ -181,12 +173,46 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         fill(255);
         ellipse(110,370,30,15);
        
-
-      
-        fill(40)
+        
         let otherEye = map(other,0,100,120,100);
+        
+        fill(40);
         ellipse(otherEye,370,10,10);
 
+//////////////////////////////
+        
+        noStroke();
+        fill(230, 52, 32, 255);
+        triangle(90+420,365,90+420,325,100+420,350);
+        triangle(115+415,355,115+415,315,125+415,355);
+        ellipse(120+400,370,80,50);
+        rect(110+420,445,50,110,80);
+
+        fill(247, 104, 94);
+        ellipse(125+390,460,30,80);
+
+        fill(40);
+        rect(140+360,450,10,100);
+        
+        ////////////////////////////////////////////
+        
+        let tailLength2 = map(vocal,0,100,200,700);
+        fill(230,52,32,255);
+        rect(70+500,600,5,tailLength2);
+        triangle(60+500,380,70+500,360,80+500,380);
+
+       
+       
+        
+        let otherEye2 = map(other,0,100,120,100);
+        stroke(0);
+        fill(255);
+        ellipse(110+420,370,30,15);
+
+        fill(40);
+        ellipse(otherEye2+420,370,10,10);
+
+       
        
 
     }
