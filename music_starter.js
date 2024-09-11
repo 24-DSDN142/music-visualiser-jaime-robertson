@@ -1,5 +1,7 @@
 let y= 110
 
+
+
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   background(40)
@@ -74,74 +76,89 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
       }
 
-  }
+    //}
 
-  else{
+      //else{
 
-    if(counter > 1160){  
-      fill(230, 52, 32, 200);
-      rect(320,400,200,500);
+        //if(counter > 1160){  
+        fill(230, 52, 32, 200);
+        rect(320,400,200,500);
       
-      fill(230,52,32,190);
-      rect(320,400,150,500)
+        fill(230,52,32,190);
+        rect(320,400,150,500)
     
-      stroke(0);
-      fill(230, 52, 32, 220); // red
-      rect(320,400,250,500); // glass
+        stroke(0);
+        fill(230, 52, 32, 220); // red
+        rect(320,400,250,500); // glass
 
        
-      stroke(0);
-      fill(59, 56, 56, 255); //grey
+        stroke(0);
+        fill(59, 56, 56, 255); //grey
   
-      rect(203,400,15,500); //left window frame
-      rect(437,400,15,500); //right window frame
-      rect(320,158,250,30); //top window frame 
+        rect(203,400,15,500); //left window frame
+        rect(437,400,15,500); //right window frame
+        rect(320,158,250,30); //top window frame 
 
-      rect(320,320,220,8); // middle window frame
+        rect(320,320,220,8); // middle window frame
 
-      rect(317,480,300,30);
+        rect(317,480,300,30);
 
-      stroke(20); // black
-      line(195,150,445,150);
+        stroke(20); // black
+        line(195,150,445,150);
       
-      let eyeSize = map(drum,0,100,10,70);
+        let eyeSize = map(drum,0,100,10,70);
   
-      fill(255);
-      ellipse(320,250,180,60);
+        fill(255, 250, 250, 230);
+        ellipse(320,250,180,60);
   
   
-      fill(0);
-      ellipse(320,250,eyeSize,eyeSize);
+        fill(0);
+        ellipse(320,250,eyeSize,eyeSize);
 
-      fill(230,52,32,255);
-      noStroke();
-      rotate(-40);
-      rect(40,333,50,20);
+        fill(230,52,32,255);
+        noStroke();
+        rotate(-40);
+        rect(40,333,50,20);
   
-      rotate(40);
+        rotate(40);
 
-      stroke(0);
-      fill(0);
-      line(225,250,250,230);
-      line(370,220,390,225)
+        stroke(0);
+        fill(0);
+        line(225,250,250,230);
+        line(370,220,390,225)
 
 
-      let backStripe = map(bass,0,100,10,200);
-      noStroke();
-      fill(59, 56, 56,200);
-      rect(0,0,backStripe,1000);
-      rect(640,0,backStripe,1000);
-
-      
+        let backStripe = map(bass,0,100,10,200);
+        noStroke();
+        fill(59, 56, 56,200);
+        rect(0,0,backStripe,1000);
+        rect(640,0,backStripe,1000);
 
       
+        // singing character 
+        fill(230, 52, 32, 220);
+        ellipse(120,365,80,50);
+        rect(110,440,50,110,80);
+        triangle(90,355,90,325,100,345);
+        triangle(115,355,115,315,125,345);
+        fill(255);
+        ellipse(110,365,30,15);
 
-    }
-      else{
+      
+        fill(40)
+        let vocalEye = map(vocal,0,100,100,75);
+        ellipse(vocalEye,365,10,10);
+
+        beginShape();
+5
+      
+
+    //}
+      //else{
 
 
 
-    }
+    //}
 
 
   }
