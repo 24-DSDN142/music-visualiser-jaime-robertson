@@ -92,13 +92,13 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
             line(370,300,390,267);
           }
 
-    }
+    //}
       //////////////////////////////////////////////////////////////////////////////////
-      else{ // second section for when the second window is shown with all the creatures.
+    //else{ // second section for when the second window is shown with all the creatures.
 
        // this counter starts a little later than when the previous one ends on purpose
        // ... so the screen goes black for a bit for dramatic effect when the intro finishes.
-       if(counter > 1140){ 
+       //if(counter > 1140){ 
         
         fill(230,52,32,200); // red colour for pane of glass
         rect(320,400,200,500); //glass
@@ -176,8 +176,8 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         
         let tailLength = map(vocal,0,100,200,700); // map for the length of the creatures tail
         fill(230,52,32,255); // red
-        rect(70,600,5,tailLength); // tail
-        triangle(60,380,70,360,80,380); //spike on end of tail
+        rect(70,600,5,tailLength,90); // tail
+        triangle(60,380+tailLength,70,360+tailLength+20,80,380 + tailLength); //spike on end of tail
 
         
         let otherEye = map(other,0,100,120,100);
@@ -208,8 +208,8 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
         let tailLength2 = map(vocal,0,100,200,700);
         fill(230,52,32,255); //red
-        rect(70+500,600,5,tailLength2); //tail
-        triangle(60+500,380,70+500,360,80+500,380); // spike on end of tail
+        rect(70+500,600,5,tailLength2,90); //tail
+        //triangle(60+500,380,70+500,360,80+500,380); // spike on end of tail
 
 
         let otherEye2 = map(other,0,100,120,100);
@@ -221,10 +221,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
         ellipse(otherEye2+420,370,10,10); // pupil of the eye
 
        
-    }
-      else{
+   // }
+      //else{
 
-      }
+      //}
 
 
   }
